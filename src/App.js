@@ -13,8 +13,10 @@ const App = () => {
   useEffect(() => {
     const fetchItems = async () => {
       setIsLoading(true);
-      const url = `https://www.breakingbadapi.com/api/characters?name=${query}`;
-      const result = await axios(url);
+      // const url = `https://www.breakingbadapi.com/api/characters?name=${query}`;
+      const result = await axios(
+        `https://www.breakingbadapi.com/api/characters?name=${query}`
+      );
 
       console.log(result.data);
 
